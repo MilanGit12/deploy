@@ -5,19 +5,16 @@ resource "aws_s3_bucket" "data" {
   # bucket does not have versioning
   bucket        = "${local.resource_prefix.value}-data"
   force_destroy = true
-  tags = merge({
-    Name        = "${local.resource_prefix.value}-data"
-    Environment = local.resource_prefix.value
-    }, {
-    git_commit           = "3f5b66d407a8fab9148c7ae9edc5a600d42f00b4"
-    git_file             = "terraform/aws/s3.tf"
-    git_last_modified_at = "2021-12-13 06:34:51"
-    git_last_modified_by = "34870196+LironElbaz@users.noreply.github.com"
-    git_modifiers        = "34870196+LironElbaz/nimrodkor"
+  tags = {
+    git_commit           = "135772ecec3bc61eb3c42013f1c1251a6ec36404"
+    git_file             = "s3.tf"
+    git_last_modified_at = "2023-05-30 15:31:04"
+    git_last_modified_by = "123986661+MilanGit12@users.noreply.github.com"
+    git_modifiers        = "123986661+MilanGit12"
     git_org              = "MilanGit12"
-    git_repo             = "terragoat"
-    yor_trace            = "0874007d-903a-4b4c-945f-c9c233e13243"
-  })
+    git_repo             = "deploy"
+    yor_trace            = "4ef06875-4a2f-4a63-b01d-0eba8470a91b"
+  }
 }
 
 
@@ -25,19 +22,16 @@ resource "aws_s3_bucket_object" "data_object" {
   bucket = aws_s3_bucket.data.id
   key    = "customer-master.xlsx"
   source = "resources/customer-master.xlsx"
-  tags = merge({
-    Name        = "${local.resource_prefix.value}-customer-master"
-    Environment = local.resource_prefix.value
-    }, {
-    git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
-    git_file             = "terraform/aws/s3.tf"
-    git_last_modified_at = "2020-06-16 14:46:24"
-    git_last_modified_by = "nimrodkor@gmail.com"
-    git_modifiers        = "nimrodkor"
-    git_org              = "bridgecrewio"
-    git_repo             = "terragoat"
-    yor_trace            = "a7f01cc7-63c2-41a8-8555-6665e5e39a64"
-  })
+  tags = {
+    git_commit           = "135772ecec3bc61eb3c42013f1c1251a6ec36404"
+    git_file             = "s3.tf"
+    git_last_modified_at = "2023-05-30 15:31:04"
+    git_last_modified_by = "123986661+MilanGit12@users.noreply.github.com"
+    git_modifiers        = "123986661+MilanGit12"
+    git_org              = "MilanGit12"
+    git_repo             = "deploy"
+    yor_trace            = "7632dd1e-892c-4db6-9954-5691a81a641c"
+  }
 }
 
 resource "aws_s3_bucket" "financials" {
@@ -49,20 +43,16 @@ resource "aws_s3_bucket" "financials" {
   bucket        = "${local.resource_prefix.value}-financials"
   acl           = "private"
   force_destroy = true
-  tags = merge({
-    Name        = "${local.resource_prefix.value}-financials"
-    Environment = local.resource_prefix.value
-    }, {
-    git_commit           = "N/A"
-    git_file             = "terraform/aws/s3.tf"
-    git_last_modified_at = "2023-05-30 15:04:18"
-    git_last_modified_by = "milpatel@paloaltonetworks.com"
-    git_modifiers        = "milpatel/nimrodkor"
+  tags = {
+    git_commit           = "135772ecec3bc61eb3c42013f1c1251a6ec36404"
+    git_file             = "s3.tf"
+    git_last_modified_at = "2023-05-30 15:31:04"
+    git_last_modified_by = "123986661+MilanGit12@users.noreply.github.com"
+    git_modifiers        = "123986661+MilanGit12"
     git_org              = "MilanGit12"
-    git_repo             = "terragoat"
-    yor_trace            = "0e012640-b597-4e5d-9378-d4b584aea913"
-  })
-
+    git_repo             = "deploy"
+    yor_trace            = "1d1fb83e-f4d3-4e2b-b442-824c46af108e"
+  }
 }
 
 
@@ -84,20 +74,16 @@ resource "aws_s3_bucket" "operations" {
   versioning {
     enabled = true
   }
-  force_destroy = true
-  tags = merge({
-    Name        = "${local.resource_prefix.value}-operations"
-    Environment = local.resource_prefix.value
-    }, {
-    git_commit           = "c955c5293ac14128d3b4ebd10b5f72ef1ac8b1c4"
-    git_file             = "terraform/aws/s3.tf"
-    git_last_modified_at = "2023-02-22 20:37:38"
-    git_last_modified_by = "milpatel@paloaltonetworks.com"
-    git_modifiers        = "milpatel/nimrodkor"
+  tags = {
+    git_commit           = "135772ecec3bc61eb3c42013f1c1251a6ec36404"
+    git_file             = "s3.tf"
+    git_last_modified_at = "2023-05-30 15:31:04"
+    git_last_modified_by = "123986661+MilanGit12@users.noreply.github.com"
+    git_modifiers        = "123986661+MilanGit12"
     git_org              = "MilanGit12"
-    git_repo             = "terragoat"
-    yor_trace            = "29efcf7b-22a8-4bd6-8e14-1f55b3a2d743"
-  })
+    git_repo             = "deploy"
+    yor_trace            = "fe045a35-8cf2-470d-b4a0-351cd66acc35"
+  }
 }
 
 
@@ -114,14 +100,14 @@ resource "aws_s3_bucket" "destination" {
     status = "Enabled"
   }
   tags = {
-    yor_trace            = "055c9fe1-c645-46c3-8a4b-a5823d6001b2"
-    git_commit           = "c955c5293ac14128d3b4ebd10b5f72ef1ac8b1c4"
-    git_file             = "terraform/aws/s3.tf"
-    git_last_modified_at = "2023-02-22 20:37:38"
-    git_last_modified_by = "milpatel@paloaltonetworks.com"
-    git_modifiers        = "milpatel"
+    git_commit           = "135772ecec3bc61eb3c42013f1c1251a6ec36404"
+    git_file             = "s3.tf"
+    git_last_modified_at = "2023-05-30 15:31:04"
+    git_last_modified_by = "123986661+MilanGit12@users.noreply.github.com"
+    git_modifiers        = "123986661+MilanGit12"
     git_org              = "MilanGit12"
-    git_repo             = "terragoat"
+    git_repo             = "deploy"
+    yor_trace            = "ff73df57-24c0-42c8-816c-2b0465df8cb5"
   }
 }
 
@@ -143,14 +129,14 @@ resource "aws_iam_role" "replication" {
 }
 POLICY
   tags = {
-    yor_trace            = "4b267e3a-651e-4ea8-8c8d-003107ac4a87"
-    git_commit           = "c955c5293ac14128d3b4ebd10b5f72ef1ac8b1c4"
-    git_file             = "terraform/aws/s3.tf"
-    git_last_modified_at = "2023-02-22 20:37:38"
-    git_last_modified_by = "milpatel@paloaltonetworks.com"
-    git_modifiers        = "milpatel"
+    git_commit           = "135772ecec3bc61eb3c42013f1c1251a6ec36404"
+    git_file             = "s3.tf"
+    git_last_modified_at = "2023-05-30 15:31:04"
+    git_last_modified_by = "123986661+MilanGit12@users.noreply.github.com"
+    git_modifiers        = "123986661+MilanGit12"
     git_org              = "MilanGit12"
-    git_repo             = "terragoat"
+    git_repo             = "deploy"
+    yor_trace            = "4db97f86-19da-480f-85f1-f904d7f2e858"
   }
 }
 
@@ -176,14 +162,14 @@ resource "aws_s3_bucket_replication_configuration" "operations" {
 resource "aws_s3_bucket" "operations_log_bucket" {
   bucket = "operations-log-bucket"
   tags = {
-    git_commit           = "02be5d2dd3974084dc3ee6204c038deec5467ed5"
-    git_file             = "terraform/aws/s3.tf"
-    git_last_modified_at = "2023-02-08 19:10:42"
-    git_last_modified_by = "milpatel@paloaltonetworks.com"
-    git_modifiers        = "milpatel"
+    git_commit           = "135772ecec3bc61eb3c42013f1c1251a6ec36404"
+    git_file             = "s3.tf"
+    git_last_modified_at = "2023-05-30 15:31:04"
+    git_last_modified_by = "123986661+MilanGit12@users.noreply.github.com"
+    git_modifiers        = "123986661+MilanGit12"
     git_org              = "MilanGit12"
-    git_repo             = "terragoat"
-    yor_trace            = "7ac724dc-625f-4720-a9c0-d1a99b1a7e3c"
+    git_repo             = "deploy"
+    yor_trace            = "02461143-8cd6-4c01-97b7-9c96499c6d2b"
   }
 }
 
@@ -221,16 +207,15 @@ resource "aws_s3_bucket" "data_science" {
     target_bucket = "${aws_s3_bucket.logs.id}"
     target_prefix = "log/"
   }
-  force_destroy = true
   tags = {
-    git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
-    git_file             = "terraform/aws/s3.tf"
-    git_last_modified_at = "2020-06-16 14:46:24"
-    git_last_modified_by = "nimrodkor@gmail.com"
-    git_modifiers        = "nimrodkor"
-    git_org              = "bridgecrewio"
-    git_repo             = "terragoat"
-    yor_trace            = "9a7c8788-5655-4708-bbc3-64ead9847f64"
+    git_commit           = "135772ecec3bc61eb3c42013f1c1251a6ec36404"
+    git_file             = "s3.tf"
+    git_last_modified_at = "2023-05-30 15:31:04"
+    git_last_modified_by = "123986661+MilanGit12@users.noreply.github.com"
+    git_modifiers        = "123986661+MilanGit12"
+    git_org              = "MilanGit12"
+    git_repo             = "deploy"
+    yor_trace            = "edb77fef-7d69-43e5-827b-37091bc5ebd5"
   }
 }
 
@@ -248,18 +233,15 @@ resource "aws_s3_bucket" "logs" {
       }
     }
   }
-  force_destroy = true
-  tags = merge({
-    Name        = "${local.resource_prefix.value}-logs"
-    Environment = local.resource_prefix.value
-    }, {
-    git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
-    git_file             = "terraform/aws/s3.tf"
-    git_last_modified_at = "2020-06-16 14:46:24"
-    git_last_modified_by = "nimrodkor@gmail.com"
-    git_modifiers        = "nimrodkor"
-    git_org              = "bridgecrewio"
-    git_repo             = "terragoat"
-    yor_trace            = "01946fe9-aae2-4c99-a975-e9b0d3a4696c"
-  })
+
+  tags = {
+    git_commit           = "135772ecec3bc61eb3c42013f1c1251a6ec36404"
+    git_file             = "s3.tf"
+    git_last_modified_at = "2023-05-30 15:31:04"
+    git_last_modified_by = "123986661+MilanGit12@users.noreply.github.com"
+    git_modifiers        = "123986661+MilanGit12"
+    git_org              = "MilanGit12"
+    git_repo             = "deploy"
+    yor_trace            = "dfcc308c-e050-4df7-a4d9-68403b997f37"
+  }
 }
