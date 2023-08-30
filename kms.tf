@@ -12,6 +12,7 @@ resource "aws_kms_key" "logs_key" {
     git_org              = "MilanGit12"
     git_repo             = "deploy"
     yor_trace            = "7057517c-fad7-46d2-87dd-1cf1b0a6aaa8"
+    Privacy              = ""
   }
 }
 
