@@ -14,6 +14,7 @@ resource "aws_s3_bucket" "data" {
     git_org              = "MilanGit12"
     git_repo             = "deploy"
     yor_trace            = "4ef06875-4a2f-4a63-b01d-0eba8470a91b"
+    Privacy              = ""
   }
 }
 
@@ -31,6 +32,7 @@ resource "aws_s3_bucket_object" "data_object" {
     git_org              = "MilanGit12"
     git_repo             = "deploy"
     yor_trace            = "7632dd1e-892c-4db6-9954-5691a81a641c"
+    Privacy              = ""
   }
 }
 
@@ -52,6 +54,7 @@ resource "aws_s3_bucket" "financials" {
     git_org              = "MilanGit12"
     git_repo             = "deploy"
     yor_trace            = "1d1fb83e-f4d3-4e2b-b442-824c46af108e"
+    Privacy              = ""
   }
 }
 
@@ -83,6 +86,7 @@ resource "aws_s3_bucket" "operations" {
     git_org              = "MilanGit12"
     git_repo             = "deploy"
     yor_trace            = "fe045a35-8cf2-470d-b4a0-351cd66acc35"
+    Privacy              = ""
   }
 }
 
@@ -108,6 +112,7 @@ resource "aws_s3_bucket" "destination" {
     git_org              = "MilanGit12"
     git_repo             = "deploy"
     yor_trace            = "ff73df57-24c0-42c8-816c-2b0465df8cb5"
+    Privacy              = ""
   }
 }
 
@@ -137,6 +142,7 @@ POLICY
     git_org              = "MilanGit12"
     git_repo             = "deploy"
     yor_trace            = "4db97f86-19da-480f-85f1-f904d7f2e858"
+    Privacy              = ""
   }
 }
 
@@ -170,6 +176,7 @@ resource "aws_s3_bucket" "operations_log_bucket" {
     git_org              = "MilanGit12"
     git_repo             = "deploy"
     yor_trace            = "02461143-8cd6-4c01-97b7-9c96499c6d2b"
+    Privacy              = ""
   }
 }
 
@@ -216,6 +223,7 @@ resource "aws_s3_bucket" "data_science" {
     git_org              = "MilanGit12"
     git_repo             = "deploy"
     yor_trace            = "edb77fef-7d69-43e5-827b-37091bc5ebd5"
+    Privacy              = ""
   }
 }
 
@@ -243,5 +251,6 @@ resource "aws_s3_bucket" "logs" {
     git_org              = "MilanGit12"
     git_repo             = "deploy"
     yor_trace            = "dfcc308c-e050-4df7-a4d9-68403b997f37"
+    Privacy              = ""
   }
 }
